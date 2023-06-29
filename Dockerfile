@@ -24,4 +24,8 @@ RUN pip install jupyterlab notebook
 # Specify the command to run on container start
 # CMD [ "python", "./app.py" ]
 
-CMD [ "/usr/bin/bash", "/opt/app-root/bin/jupyter-lab" ]
+# CMD [ "/usr/bin/bash", "/opt/app-root/bin/jupyter-lab" ]
+# ENTRYPOINT ["/bin/sh", "-c", "--" , "while true; do sleep 30; done;"]
+
+ENTRYPOINT ["/usr/bin/bash", "-c", "--" , "while true; do sleep 30; done;"]
+
